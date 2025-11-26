@@ -2,6 +2,7 @@
 #define ComplexPlane_h
 
 #include <SFML/Graphics.hpp>
+using namespace sf;
 
 const unsigned int MAX_ITER = 64;
 const float BASE_WIDTH = 4.0;
@@ -10,11 +11,11 @@ const float BASE_ZOOM = 0.5;
 
 enum class State
 {
-    CALCULATING;
-    DISPLAYING;
+    CALCULATING,
+    DISPLAYING
 };
 
-class ComplexPlane
+class ComplexPlane: public Drawable
 {
     public:
         ComplexPlane(int pixelWidth, int pixelHeight);
